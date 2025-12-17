@@ -1,3 +1,264 @@
-/*! For license information please see commands.js.LICENSE.txt */
-!function(){function e(){var r,t,o="function"==typeof Symbol?Symbol:{},a=o.iterator||"@@iterator",c=o.toStringTag||"@@toStringTag";function u(e,o,a,c){var u=o&&o.prototype instanceof s?o:s,f=Object.create(u.prototype);return n(f,"_invoke",function(e,n,o){var a,c,u,s=0,f=o||[],l=!1,d={p:0,n:0,v:r,a:p,f:p.bind(r,4),d:function(e,n){return a=e,c=0,u=r,d.n=n,i}};function p(e,n){for(c=e,u=n,t=0;!l&&s&&!o&&t<f.length;t++){var o,a=f[t],p=d.p,y=a[2];e>3?(o=y===n)&&(u=a[(c=a[4])?5:(c=3,3)],a[4]=a[5]=r):a[0]<=p&&((o=e<2&&p<a[1])?(c=0,d.v=n,d.n=a[1]):p<y&&(o=e<3||a[0]>n||n>y)&&(a[4]=e,a[5]=n,d.n=y,c=0))}if(o||e>1)return i;throw l=!0,n}return function(o,f,y){if(s>1)throw TypeError("Generator is already running");for(l&&1===f&&p(f,y),c=f,u=y;(t=c<2?r:u)||!l;){a||(c?c<3?(c>1&&(d.n=-1),p(c,u)):d.n=u:d.v=u);try{if(s=2,a){if(c||(o="next"),t=a[o]){if(!(t=t.call(a,u)))throw TypeError("iterator result is not an object");if(!t.done)return t;u=t.value,c<2&&(c=0)}else 1===c&&(t=a.return)&&t.call(a),c<2&&(u=TypeError("The iterator does not provide a '"+o+"' method"),c=1);a=r}else if((t=(l=d.n<0)?u:e.call(n,d))!==i)break}catch(e){a=r,c=1,u=e}finally{s=1}}return{value:t,done:l}}}(e,a,c),!0),f}var i={};function s(){}function f(){}function l(){}t=Object.getPrototypeOf;var d=[][a]?t(t([][a]())):(n(t={},a,function(){return this}),t),p=l.prototype=s.prototype=Object.create(d);function y(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,l):(e.__proto__=l,n(e,c,"GeneratorFunction")),e.prototype=Object.create(p),e}return f.prototype=l,n(p,"constructor",l),n(l,"constructor",f),f.displayName="GeneratorFunction",n(l,c,"GeneratorFunction"),n(p),n(p,c,"Generator"),n(p,a,function(){return this}),n(p,"toString",function(){return"[object Generator]"}),(e=function(){return{w:u,m:y}})()}function n(e,r,t,o){var a=Object.defineProperty;try{a({},"",{})}catch(e){a=0}n=function(e,r,t,o){function c(r,t){n(e,r,function(e){return this._invoke(r,t,e)})}r?a?a(e,r,{value:t,enumerable:!o,configurable:!o,writable:!o}):e[r]=t:(c("next",0),c("throw",1),c("return",2))},n(e,r,t,o)}function r(e,n){var r="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!r){if(Array.isArray(e)||(r=function(e,n){if(e){if("string"==typeof e)return t(e,n);var r={}.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?t(e,n):void 0}}(e))||n&&e&&"number"==typeof e.length){r&&(e=r);var o=0,a=function(){};return{s:a,n:function(){return o>=e.length?{done:!0}:{done:!1,value:e[o++]}},e:function(e){throw e},f:a}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var c,u=!0,i=!1;return{s:function(){r=r.call(e)},n:function(){var e=r.next();return u=e.done,e},e:function(e){i=!0,c=e},f:function(){try{u||null==r.return||r.return()}finally{if(i)throw c}}}}function t(e,n){(null==n||n>e.length)&&(n=e.length);for(var r=0,t=Array(n);r<n;r++)t[r]=e[r];return t}function o(e,n,r,t,o,a,c){try{var u=e[a](c),i=u.value}catch(e){return void r(e)}u.done?n(i):Promise.resolve(i).then(t,o)}function a(e){return function(){var n=this,r=arguments;return new Promise(function(t,a){var c=e.apply(n,r);function u(e){o(c,t,a,u,i,"next",e)}function i(e){o(c,t,a,u,i,"throw",e)}u(void 0)})}}function c(){return u.apply(this,arguments)}function u(){return u=a(e().m(function n(){return e().w(function(n){for(;;)if(0===n.n)return n.a(2,Excel.run(function(){var n=a(e().m(function n(r){var t,o,a;return e().w(function(e){for(;;)switch(e.p=e.n){case 0:return e.p=0,(t=r.workbook.getSelectedRanges()).worksheet.load({id:!0,name:!0}),t.areas.load({address:!0}),e.p=1,e.n=2,r.sync();case 2:e.n=5;break;case 3:if(e.p=3,!((o=e.v)instanceof Error&&(o.message.includes("Wait until")||o.message.includes("is currently busy")))){e.n=4;break}return console.warn("Excel is busy. Could not get selected ranges. ".concat(o.message)),e.a(2,[]);case 4:throw o;case 5:return e.a(2,t.areas.items.map(function(e){return{address:e.address,worksheet:{id:t.worksheet.id,name:t.worksheet.name}}}));case 6:return e.p=6,a=e.v,console.error("Error in getSelectedRanges: ".concat(a)),e.a(2,[])}},n,null,[[1,3],[0,6]])}));return function(e){return n.apply(this,arguments)}}()))},n)})),u.apply(this,arguments)}function i(e,n,r){return s.apply(this,arguments)}function s(){return(s=a(e().m(function n(r,t,o){var a,c,u,i;return e().w(function(e){for(;;)switch(e.n){case 0:if(!(r.indexOf(",")>-1)){e.n=1;break}a=t.getRanges(r),e.n=3;break;case 1:return c=t.getRange(r),u=t.getUsedRange(),i=c.getIntersectionOrNullObject(u),e.n=2,o.sync();case 2:a=i.isNullObject?c:i;case 3:return e.a(2,a)}},n)}))).apply(this,arguments)}Office.onReady(function(){}),Office.actions.associate("onCalculateRibbonClick",function(n){Excel.run(function(){var n=a(e().m(function n(t){var o,a,u,s,f,l,d,p;return e().w(function(e){for(;;)switch(e.n){case 0:return(o=t.workbook.worksheets.getActiveWorksheet()).load(["id","name"]),e.n=1,t.sync();case 1:return e.n=2,c();case 2:a=e.v,u=a.map(function(e){return e.address}).join(","),s=[],f=r(a);try{for(f.s();!(l=f.n()).done;)d=l.value,(p=o.getRange(d.address)).load(["formulas","address","columnIndex","rowIndex"]),s.push(p)}catch(e){f.e(e)}finally{f.f()}return e.n=3,t.sync();case 3:return e.n=4,i(u,o,t);case 4:return e.v.calculate(),e.n=5,t.sync();case 5:console.log("Calculation completed for selected range");case 6:return e.a(2)}},n)}));return function(e){return n.apply(this,arguments)}}()),n.completed()}),Office.actions.associate("onSafeCalculateRibbonClick",function(n){var t=this;Excel.run(function(){var n=a(e().m(function n(o){var a,u,s,f,l,d,p,y,v,h;return e().w(function(e){for(;;)switch(e.p=e.n){case 0:return(a=o.workbook.worksheets.getActiveWorksheet()).load(["id","name"]),e.n=1,o.sync();case 1:return e.n=2,c();case 2:u=e.v,s=u.map(function(e){return e.address}).join(","),f=[],l=r(u);try{for(l.s();!(d=l.n()).done;)p=d.value,(y=a.getRange(p.address)).load(["formulas","address","columnIndex","rowIndex"]),f.push(y)}catch(e){l.e(e)}finally{l.f()}return e.n=3,o.sync();case 3:return e.n=4,i(s,a,o);case 4:return v=e.v,e.p=5,v.calculate(),e.n=6,o.sync();case 6:e.n=10;break;case 7:if(e.p=7,"ItemNotFound"!==(null==(h=e.v)?void 0:h.code)){e.n=9;break}return t._logger.warn("Range reference became stale, getting fresh reference for calculation"),e.n=8,i(s,a,o);case 8:e.v.calculate(),e.n=10;break;case 9:throw h;case 10:console.log("Calculation completed for selected range");case 11:return e.a(2)}},n,null,[[5,7]])}));return function(e){return n.apply(this,arguments)}}()),n.completed()})}();
+/******/ (function() { // webpackBootstrap
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i.return) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+/* global Office */
+
+Office.onReady(function () {
+  // Suppress Office error dialogs in production
+  if (typeof Office !== 'undefined' && Office.context && Office.context.ui) {
+    var originalDisplayDialog = Office.context.ui.displayDialogAsync;
+    Office.context.ui.displayDialogAsync = function (url, options, callback) {
+      // Only allow specific dialogs, block debug/error dialogs
+      if (url && !url.includes('debug') && !url.includes('event')) {
+        originalDisplayDialog.call(this, url, options, callback);
+      }
+    };
+  }
+});
+function getSelectedRanges() {
+  return _getSelectedRanges.apply(this, arguments);
+}
+function _getSelectedRanges() {
+  _getSelectedRanges = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+    return _regenerator().w(function (_context2) {
+      while (1) switch (_context2.n) {
+        case 0:
+          return _context2.a(2, Excel.run(/*#__PURE__*/function () {
+            var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(context) {
+              var rangeAreas, rangeCollection, _t, _t2;
+              return _regenerator().w(function (_context) {
+                while (1) switch (_context.p = _context.n) {
+                  case 0:
+                    _context.p = 0;
+                    rangeAreas = context.workbook.getSelectedRanges();
+                    rangeAreas.worksheet.load({
+                      id: true,
+                      name: true
+                    });
+                    rangeCollection = rangeAreas.areas;
+                    rangeCollection.load({
+                      address: true
+                    });
+                    _context.p = 1;
+                    _context.n = 2;
+                    return context.sync();
+                  case 2:
+                    _context.n = 5;
+                    break;
+                  case 3:
+                    _context.p = 3;
+                    _t = _context.v;
+                    if (!(_t instanceof Error && (_t.message.includes("Wait until") || _t.message.includes("is currently busy")))) {
+                      _context.n = 4;
+                      break;
+                    }
+                    console.warn("Excel is busy. Could not get selected ranges. ".concat(_t.message));
+                    return _context.a(2, []);
+                  case 4:
+                    throw _t;
+                  case 5:
+                    return _context.a(2, rangeAreas.areas.items.map(function (range) {
+                      return {
+                        address: range.address,
+                        worksheet: {
+                          id: rangeAreas.worksheet.id,
+                          name: rangeAreas.worksheet.name
+                        }
+                      };
+                    }));
+                  case 6:
+                    _context.p = 6;
+                    _t2 = _context.v;
+                    console.error("Error in getSelectedRanges: ".concat(_t2));
+                    return _context.a(2, []);
+                }
+              }, _callee, null, [[1, 3], [0, 6]]);
+            }));
+            return function (_x8) {
+              return _ref.apply(this, arguments);
+            };
+          }()));
+      }
+    }, _callee2);
+  }));
+  return _getSelectedRanges.apply(this, arguments);
+}
+function getRangeOrIntersection(_x, _x2, _x3) {
+  return _getRangeOrIntersection.apply(this, arguments);
+}
+function _getRangeOrIntersection() {
+  _getRangeOrIntersection = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(rangeAddress, worksheet, context) {
+    var range, initialRange, usedRange, intersection;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          if (!(rangeAddress.indexOf(",") > -1)) {
+            _context3.n = 1;
+            break;
+          }
+          // Multiple ranges case
+          range = worksheet.getRanges(rangeAddress);
+          _context3.n = 3;
+          break;
+        case 1:
+          // Single range  - get intersection with used range
+          initialRange = worksheet.getRange(rangeAddress);
+          usedRange = worksheet.getUsedRange();
+          intersection = initialRange.getIntersectionOrNullObject(usedRange);
+          _context3.n = 2;
+          return context.sync();
+        case 2:
+          // If there's no intersection, fall back to the original range
+          range = !intersection.isNullObject ? intersection : initialRange;
+        case 3:
+          return _context3.a(2, range);
+      }
+    }, _callee3);
+  }));
+  return _getRangeOrIntersection.apply(this, arguments);
+}
+function performCalculation(_x4, _x5, _x6, _x7) {
+  return _performCalculation.apply(this, arguments);
+}
+function _performCalculation() {
+  _performCalculation = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(context, range, rangeAddress, sheet) {
+    var freshRange, _t3;
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.p = _context4.n) {
+        case 0:
+          _context4.p = 0;
+          range.calculate();
+          _context4.n = 1;
+          return context.sync();
+        case 1:
+          _context4.n = 6;
+          break;
+        case 2:
+          _context4.p = 2;
+          _t3 = _context4.v;
+          if (!((_t3 === null || _t3 === void 0 ? void 0 : _t3.code) === 'ItemNotFound')) {
+            _context4.n = 5;
+            break;
+          }
+          console.log('>> Range reference became stale, getting fresh reference for calculation <<');
+          // Get a fresh reference to the range and try again
+          _context4.n = 3;
+          return getRangeOrIntersection(rangeAddress, sheet, context);
+        case 3:
+          freshRange = _context4.v;
+          freshRange.calculate();
+          _context4.n = 4;
+          return context.sync();
+        case 4:
+          _context4.n = 6;
+          break;
+        case 5:
+          throw _t3;
+        case 6:
+          return _context4.a(2);
+      }
+    }, _callee4, null, [[0, 2]]);
+  }));
+  return _performCalculation.apply(this, arguments);
+}
+function executeCalculation() {
+  return _executeCalculation.apply(this, arguments);
+}
+function _executeCalculation() {
+  _executeCalculation = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
+    var isSafe,
+      _args6 = arguments;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.n) {
+        case 0:
+          isSafe = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : false;
+          return _context6.a(2, Excel.run(/*#__PURE__*/function () {
+            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(context) {
+              var sheet, ranges, rangeAddress, loadedRanges, _iterator, _step, _range, excelRange, range;
+              return _regenerator().w(function (_context5) {
+                while (1) switch (_context5.n) {
+                  case 0:
+                    sheet = context.workbook.worksheets.getActiveWorksheet();
+                    sheet.load(["id", "name"]);
+                    _context5.n = 1;
+                    return context.sync();
+                  case 1:
+                    _context5.n = 2;
+                    return getSelectedRanges();
+                  case 2:
+                    ranges = _context5.v;
+                    rangeAddress = ranges.map(function (range) {
+                      return range.address;
+                    }).join(",");
+                    loadedRanges = [];
+                    _iterator = _createForOfIteratorHelper(ranges);
+                    try {
+                      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                        _range = _step.value;
+                        excelRange = sheet.getRange(_range.address);
+                        excelRange.load(["formulas", "address", "columnIndex", "rowIndex"]);
+                        loadedRanges.push(excelRange);
+                      }
+                    } catch (err) {
+                      _iterator.e(err);
+                    } finally {
+                      _iterator.f();
+                    }
+                    _context5.n = 3;
+                    return context.sync();
+                  case 3:
+                    _context5.n = 4;
+                    return getRangeOrIntersection(rangeAddress, sheet, context);
+                  case 4:
+                    range = _context5.v;
+                    if (!isSafe) {
+                      _context5.n = 6;
+                      break;
+                    }
+                    _context5.n = 5;
+                    return performCalculation(context, range, rangeAddress, sheet);
+                  case 5:
+                    _context5.n = 7;
+                    break;
+                  case 6:
+                    range.calculate();
+                    _context5.n = 7;
+                    return context.sync();
+                  case 7:
+                    console.log("Calculation completed for selected range");
+                  case 8:
+                    return _context5.a(2);
+                }
+              }, _callee5);
+            }));
+            return function (_x9) {
+              return _ref2.apply(this, arguments);
+            };
+          }()));
+      }
+    }, _callee6);
+  }));
+  return _executeCalculation.apply(this, arguments);
+}
+function onCalculateRibbonClick(event) {
+  executeCalculation(false);
+  // Be sure to indicate when the add-in command function is complete.
+  event.completed();
+}
+function onSafeCalculateRibbonClick(event) {
+  executeCalculation(true);
+  // Be sure to indicate when the add-in command function is complete.
+  event.completed();
+}
+
+// Register the function with Office.
+Office.actions.associate("onCalculateRibbonClick", onCalculateRibbonClick);
+Office.actions.associate("onSafeCalculateRibbonClick", onSafeCalculateRibbonClick);
+/******/ })()
+;
 //# sourceMappingURL=commands.js.map
