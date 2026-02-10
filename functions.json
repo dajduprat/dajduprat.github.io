@@ -7,6 +7,18 @@
             "name": "ENTITY",
             "parameters": [],
             "result": {}
+        },
+        {
+            "description": "Returns the current timestamp",
+            "id": "STREAMINGTIMESTAMP",
+            "name": "STREAMINGTIMESTAMP",
+            "options": {
+                "stream": true
+            },
+            "parameters": [],
+            "result": {
+                "type": "string"
+            }
         }
     ]
 }
