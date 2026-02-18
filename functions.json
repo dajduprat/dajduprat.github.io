@@ -13,6 +13,7 @@
             "id": "STREAMINGTIMESTAMP",
             "name": "STREAMINGTIMESTAMP",
             "options": {
+                "requiresStreamAddress": true,
                 "stream": true
             },
             "parameters": [],

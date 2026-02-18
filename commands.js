@@ -9,16 +9,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
 /* global Office */
 
 Office.onReady(function () {
-  // Suppress Office error dialogs in production
-  if (typeof Office !== 'undefined' && Office.context && Office.context.ui) {
-    var originalDisplayDialog = Office.context.ui.displayDialogAsync;
-    Office.context.ui.displayDialogAsync = function (url, options, callback) {
-      // Only allow specific dialogs, block debug/error dialogs
-      if (url && !url.includes('debug') && !url.includes('event')) {
-        originalDisplayDialog.call(this, url, options, callback);
-      }
-    };
-  }
+  // If needed, Office.js is ready to be called.
 });
 function getSelectedRanges() {
   return _getSelectedRanges.apply(this, arguments);

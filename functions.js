@@ -44,6 +44,7 @@ function entity() {
  * @customfunction
  * @streaming
  * @param {CustomFunctions.StreamingInvocation<string>} invocation Custom function invocation
+ * @requiresAddress
  * @returns {string}
  */
 function _entity() {
@@ -195,6 +196,7 @@ function _entity() {
 }
 function streamingTimestamp(invocation) {
   // Send initial timestamp
+  console.log("Streaming address cell value: " + invocation.address);
   invocation.setResult(new Date().toISOString());
 }
 CustomFunctions.associate("ENTITY", entity);

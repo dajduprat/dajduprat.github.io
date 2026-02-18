@@ -2,17 +2,17 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 58394:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "1fda685b81e1123773f6.css";
-
-/***/ }),
-
 /***/ 98362:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/logo-filled.png";
+
+/***/ }),
+
+/***/ 58394:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1fda685b81e1123773f6.css";
 
 /***/ })
 
